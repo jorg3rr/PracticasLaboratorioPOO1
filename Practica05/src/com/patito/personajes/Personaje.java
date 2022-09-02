@@ -1,5 +1,5 @@
-package com.patito.pruebas;
-import com.patito.personajes.*;
+package com.patito.personajes;
+import com.patito.pruebas.*;
 public class Personaje{
 	//Atrbutos de tipo cadena y entero
 	private String nombre;
