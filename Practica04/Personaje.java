@@ -5,7 +5,7 @@ public class Personaje{
 
 	edad = 0;
 	public int getEdad();
-	public int setEdad(){
+	public boolean setEdad(){
 		if (e > 120){
 			edad = True;
 		}else {
