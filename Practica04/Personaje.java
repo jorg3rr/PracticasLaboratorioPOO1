@@ -1,13 +1,16 @@
 public class Personaje{
 	//Atrbutos de tipo cadena y entero
 	private String nombre;
-	private int edad;
+	private boolean edad;
 
-	Edad e = new Edad(0);
+	Personaje edad = new Personaje();
+	c.setEdad(0);
+	
 	public int getEdad();
-	public boolean setEdad(){
-		if (e > 120){
-			edad = True;
+	public void setEdad(boolean edad){
+		this.edad = edad;
+		if (e>0 && e<120){
+			edad = true;
 		}else {
 			edad = e;
 		}
