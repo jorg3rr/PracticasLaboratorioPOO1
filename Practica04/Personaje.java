@@ -1,30 +1,34 @@
 public class Personaje{
 	//Atrbutos de tipo cadena y entero
 	private String nombre;
-	private boolean edad;
+	private int edad;
 
-	Personaje edad = new Personaje();
-	c.setEdad(0);
-	
-	public int getEdad();
-	public void setEdad(boolean edad){
-		this.edad = edad;
-		if (e>0 && e<120){
-			edad = true;
-		}else {
-			edad = e;
-		}
+	public Personaje(String nombre){
+		this.nombre = nombre;
+		this.edad = 0;//Valor de 0
 	}
-	 
 	public void setNombre(String nombre){
 		this.nombre = nombre;
+		this.edad = edad;
 	}
+
 	//Regresa una cadena con el valor del nombre 
 	public String getNombre(){
 		return nombre;
 	}
-	
 	public void saludar(){
 	System.out.println("Hola Alumno de POO" + nombre);
+	}
+	public int getEdad(){
+		return edad;
+	}
+	
+	public boolean setEdad(int edad){
+		if (edad > 0 && edad < 120){
+			this.edad = edad;
+			return true;
+		}else{
+			return false;
+		}
 	}	
 }
