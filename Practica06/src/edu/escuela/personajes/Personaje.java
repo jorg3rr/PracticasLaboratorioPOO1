@@ -1,17 +1,18 @@
 //Verificar paquetes
 
-package com.patito.poo1pract.personajes;
+package edu.escuela.personajes;
 
 public class Personaje{
 	//Atrbutos de tipo cadena y entero
 	private String nombre;
 	private int edad;
 
-	public Personaje(String nombre){
+	public Personaje(String nombre, int edad){
 		this.nombre = nombre;
-		this.edad = 0;
+		this.edad = edad;
 	}
 	public void setNombre(String nombre){
+		String.length(nombre > 5 && nombre < 25)
 		this.nombre = nombre;
 		this.edad = edad;
 	}
@@ -36,3 +37,4 @@ public class Personaje{
 		}
 	}	
 }
+//java string lenght
