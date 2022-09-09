@@ -31,8 +31,8 @@ public class Personaje{
 		return edad;
 	}
 	
-	public void getDetalle(){
-	System.out.println("Nombre" + "\t" + "Edad");
+	public String getDetalle(){
+	  System.out.println(nombre + "\t" + edad);
 	}
 
 	public boolean setEdad(int edad){
