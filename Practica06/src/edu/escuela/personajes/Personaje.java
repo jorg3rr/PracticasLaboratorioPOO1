@@ -9,7 +9,12 @@ public class Personaje{
 
 	public Personaje(String nombre, int edad){
 		this.nombre = nombre;
-		this.edad = edad;
+		
+		if (edad > 0 && edad < 120){
+			this.edad = edad;
+			return true;
+		}
+
 	}
 	
 	public void setNombre(String nombre){
@@ -32,7 +37,7 @@ public class Personaje{
 	}
 	
 	public String getDetalle(){
-	  System.out.println(nombre + "\t" + edad);
+	  return nombre + "\t" + edad;
 	}
 
 	public boolean setEdad(int edad){
