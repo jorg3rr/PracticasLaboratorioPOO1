@@ -1,5 +1,7 @@
-package com.patito.pruebas;
-import com.patito.personajes.*;
+//Verificar Paquetes
+
+package com.patito.poo1pract.pruebas;
+import com.patito.poo1.pract.personajes.Personaje;
 
 public class PruebaPersonaje{
 	public static void main (String[] args){
