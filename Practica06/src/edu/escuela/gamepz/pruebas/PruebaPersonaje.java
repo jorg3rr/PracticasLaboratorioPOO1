@@ -1,7 +1,7 @@
 //Verificar Paquetes
 
-package edu.escuela.pruebas;
-import edu.escuela.gamepz.Personaje;
+package edu.escuela.gamepz.pruebas;
+import edu.escuela.gamepz.personajes.Personaje;
 
 public class PruebaPersonaje{
 	public static void main (String[] args){
@@ -35,6 +35,11 @@ public class PruebaPersonaje{
 		
 		System.out.println("_ _ _");
 
+		System.out.println(per01.getDetalle());
+		System.out.println(per02.getDetalle());
+		System.out.println(per03.getDetalle());
+		System.out.println(per04.getDetalle());
+		System.out.println(per05.getDetalle());
 
 
 

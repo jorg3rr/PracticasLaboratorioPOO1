@@ -1,6 +1,6 @@
 //Verificar paquetes
 
-package edu.escuela.personajes;
+package edu.escuela.gamepz.personajes;
 
 public class Personaje{
 	//Atrbutos de tipo cadena y entero
