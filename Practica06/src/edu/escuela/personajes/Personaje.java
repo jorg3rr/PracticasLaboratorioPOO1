@@ -11,6 +11,7 @@ public class Personaje{
 		this.nombre = nombre;
 		this.edad = edad;
 	}
+	
 	public void setNombre(String nombre){
 		String.length(nombre > 5 && nombre < 25)
 		this.nombre = nombre;
@@ -21,11 +22,17 @@ public class Personaje{
 	public String getNombre(){
 		return nombre;
 	}
+	
 	public void saludar(){
 	System.out.println("Hola Alumno de POO" + nombre);
 	}
+	
 	public int getEdad(){
 		return edad;
+	}
+	
+	public void getDetalle(){
+	System.out.println("Nombre" + "\t" + "Edad");
 	}
 
 	public boolean setEdad(int edad){
