@@ -1,7 +1,7 @@
 //Verificar Paquetes
 
 package edu.escuela.pruebas;
-import edu.escuela.personajes.Personaje;
+import edu.escuela.gamepz.Personaje;
 
 public class PruebaPersonaje{
 	public static void main (String[] args){
@@ -27,12 +27,14 @@ public class PruebaPersonaje{
 		per06.setNombre("Francisco Xavier Zepeda Flores");
 		per08.setNombre("Dayan");
 		per10.setNombre("Axel Fabian Eduardo David");
+
+		int n = ((int)(Math.random()*1000));
 		
+		per07.setEdad(n);
+		per09.setEdad(n);
+		
+		System.out.println("_ _ _");
 
-
-
-
-		//  =(int)(Math.random()*100);
 
 
 
