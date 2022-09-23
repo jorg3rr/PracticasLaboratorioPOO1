@@ -12,7 +12,7 @@ public class Personaje{
 		setEdad(edad);
 	}
 	
-	public void setNombre(String nombre){
+	public void setNombre(String nombre, int edad){
 			this.nombre = nombre;
 	}
 
