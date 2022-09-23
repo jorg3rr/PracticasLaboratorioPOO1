@@ -9,10 +9,10 @@ public class Personaje{
 
 	public Personaje(String nombre, int edad){
 		this.nombre = nombre;
-		setEdad(edad);
+		edad = 0;
 	}
 	
-	public void setNombre(String nombre, int edad){
+	public void setNombre(String nombre){
 			this.nombre = nombre;
 	}
 
