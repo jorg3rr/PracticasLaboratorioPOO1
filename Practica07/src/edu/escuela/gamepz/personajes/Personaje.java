@@ -13,7 +13,10 @@ public class Personaje{
 	}
 	
 	public void setNombre(String nombre){
+		if (nombre.length() > 5 && nombre.length() < 25){
 			this.nombre = nombre;
+		}
+		this.edad = edad;
 	}
 
 	//Regresa una cadena con el valor del nombre 

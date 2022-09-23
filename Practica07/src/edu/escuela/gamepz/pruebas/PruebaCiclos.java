@@ -4,7 +4,7 @@ import edu.escuela.gamepz.personajes.Personaje;
 public class PruebaCiclos{
 	public static void main(String[] args) {
 		
-		Personaje per01 = new Personaje("Diego");
+		Personaje per01 = new Personaje("Diego ");
 		Personaje per02 = new Personaje("Almendra ");
 		Personaje per03 = new Personaje("Bianca ");
 		Personaje per04 = new Personaje("Jordan ");
@@ -50,12 +50,13 @@ public class PruebaCiclos{
 			else{
 				System.out.println(per03.getDetalle() + " Sin modificacion en edad a " + ed);
 			}
+
 			do{
 
 			ed = ((int)(Math.random()*200));
 			System.out.println(ed);
 			
-			if (ed < 150){
+			if (ed > 150){
 				System.out.println("***El numero generado es mayor a 150***");
 				continue outfor;
 			}
