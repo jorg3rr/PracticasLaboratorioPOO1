@@ -61,6 +61,7 @@ public class PruebaCiclos{
 				continue outfor;
 			}
 		}while(!per04.setEdad(ed));
+		System.out.println(per04.getDetalle());
 		}//cierra for
 	}//cierra main
 }//cierra clase
