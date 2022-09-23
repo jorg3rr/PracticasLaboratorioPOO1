@@ -50,7 +50,9 @@ public class PruebaCiclos{
 			else{
 				System.out.println(per03.getDetalle() + " Sin modificacion en edad a " + ed);
 			}
-			
 		}//cierra for
+
+		
+
 	}//cierra main
 }//cierra clase
