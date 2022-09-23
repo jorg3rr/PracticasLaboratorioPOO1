@@ -19,8 +19,8 @@ public class PruebaCiclos{
 		}//cierra while
 			System.out.println("n = "+ n);
 			System.out.println("m = "+ m);
-
-
+		//etiqueta
+		outfor:
 		for (int i = n ; i < m ;i++ ) {
 			int ed = ((int)(Math.random()*250));
 
@@ -50,9 +50,16 @@ public class PruebaCiclos{
 			else{
 				System.out.println(per03.getDetalle() + " Sin modificacion en edad a " + ed);
 			}
+			do{
+
+			ed = ((int)(Math.random()*200));
+			System.out.println(ed);
+			
+			if (ed < 150){
+				System.out.println("***El numero generado es mayor a 150***");
+				continue outfor;
+			}
+		}while(!per04.setEdad(ed));
 		}//cierra for
-
-		
-
 	}//cierra main
 }//cierra clase
