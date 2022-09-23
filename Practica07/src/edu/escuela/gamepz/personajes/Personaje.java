@@ -37,6 +37,7 @@ public class Personaje{
 			this.edad = edad;
 			return true;
 		}else{
+			this.edad = 0;
 			return false;
 		}
 	}	
