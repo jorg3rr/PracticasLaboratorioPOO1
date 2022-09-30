@@ -1,21 +1,21 @@
 package mx.parc1.soft.series;
 public class Serie{
 	public int num;
-	public int x;
-	public int r;
-
-	public Serie(int num, int x){
-		this.num = num;
-		this.x = x;
+	public int x = 0;
+	public int lim;
+	public int y = 0;
+	public Serie(){
 	}
-
-	public String fibo(int num, int x){
-		while();  
+	public String fibo(int num, int x, int y){
+		int r = 0;
+		  while(r < lim){
+		  	System.out.println();
+		  }
 	}
-	public int genNumero(int num, int x){
-		while (num < 10){
-			num = ((int)(Math.random()*x*10))
+	public int genNumero(int num, int lim){
+		while (num > 10){
+			num = ((int)(Math.random()*lim*10));
 		}
-		return x;
+		return lim;
 	}	
 }
