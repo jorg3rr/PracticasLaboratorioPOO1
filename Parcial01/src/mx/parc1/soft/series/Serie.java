@@ -9,16 +9,16 @@ public class Serie{
 		this.num = num;
 		this.lim = lim;
 	}
-	public String fibo(int lim, int x, int y){
+	public String fibo(int lim){
 		int r = 0;
-		x = 0;
-		y = 0;
+		int x = 0;
+		int y = 0;
 		  while(r < lim){
 		  	 r = x + y;
 		  }
-		  return (x) + " " + (y);
+		  return (x) + " " + y;
 	}
-	public int genNumero(int num, int lim){
+	public int genNumero(int lim){
 		while (num > 10){
 			num = ((int)(Math.random()*lim*10));
 		}
