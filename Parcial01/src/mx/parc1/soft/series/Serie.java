@@ -1,27 +1,26 @@
 package mx.parc1.soft.series;
 public class Serie{
-	public int num;
-	public int lim;
-	//public int x = 0;
-	//public int y = 0;
+	public int x;
+	public int n;
 	
-	public Serie(int num, int lim){
-		this.num = num;
-		this.lim = lim;
+	public Serie(){
+		//this.num = num;
+		//this.lim = lim;
 	}
-	public String fibo(int lim){
+	
+	public String fibo(int n){
 		int r = 0;
-		int x = 0;
-		int y = 0;
-		  while(r < lim){
-		  	 r = x + y;
+		int a = 1;
+		int b = 1;
+		  while(r < n){
+		  	 r = a + b;
 		  }
-		  return (x) + " " + y;
+		  return (a) + " " + b;
 	}
-	public int genNumero(int lim){
-		while (num > 10){
-			num = ((int)(Math.random()*lim*10));
+	public int genNumero(int x){
+		while (x > n){
+			n = ((int)(Math.random()*x*10));
 		}
-		return lim;
+		return n;
 	}	
 }
