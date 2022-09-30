@@ -2,7 +2,7 @@ package mx.parc1.soft.pruebas;
 import mx.parc1.soft.series.*;
 public class TestSeries {
 	public static void main(String[] args) {
-		Serie s = new Serie();
+		Serie s = new Serie(int 0, int 0);
 	
 		//int m = s.genNumero(100);
 		//s.primos(m);
