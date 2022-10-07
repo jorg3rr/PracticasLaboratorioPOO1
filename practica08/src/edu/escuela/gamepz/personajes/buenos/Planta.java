@@ -26,15 +26,23 @@ public class Planta extends Personaje{
 	public char getEscudo(){
 		return escudo;
 	}
+	//Metodos dec
 	public void decVida(){
 		if (getEscudo() == 'A') {
 			decVida(1);
 		}
 	}
 	public void decVida(int vida){
-		super(decVida())
+		super.decVida(vida);
 		if (getEscudo() == 'A') {
-			decVida()
+			vida *= 2;
 		}
+	}
+	//Metodos add
+	public void addVida(){
+		vida +=1;
+	}
+	public void addVida(int vida){
+		this.vida += vida;;
 	}
 }
