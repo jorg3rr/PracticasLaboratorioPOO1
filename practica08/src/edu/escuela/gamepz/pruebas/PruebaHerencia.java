@@ -28,6 +28,7 @@ public class PruebaHerencia{
 		for (Personaje tmp: personajes) {
 			System.out.println(tmp.getDetalle());
 			int n = (int)(Math.random()*100);
+			
 			if (tmp instanceof Planta) {
 				System.out.println("Soy Planta" + " " +((Planta)tmp).getEscudo());
 				tmp.addVida(n);
