@@ -1,5 +1,4 @@
 package edu.escuela.gamepz.personajes;
-
 public class Personaje{
 	//Atrbutos de tipo cadena y entero
 	private String nombre;
@@ -18,7 +17,7 @@ public class Personaje{
 	}
 	
 	public void decVida(int vida){
-		this.vida -= vida;
+		this.vida = --vida;
 	}
 
 	public void addVida(){
@@ -27,7 +26,6 @@ public class Personaje{
 	public void addVida(int vida){
 		this.vida += vida;;
 	}
-	
 	public void setNombre(String nombre){
 		if (nombre.length() > 5 && nombre.length() < 25){
 			this.nombre = nombre;
