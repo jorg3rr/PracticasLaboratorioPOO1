@@ -17,7 +17,7 @@ public class Personaje{
 	}
 	
 	public void decVida(int vida){
-		this.vida = --vida;
+		this.vida -= vida;
 	}
 
 	public void addVida(){
