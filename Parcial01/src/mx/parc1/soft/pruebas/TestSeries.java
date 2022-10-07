@@ -8,7 +8,7 @@ public class TestSeries {
 		//int o = s.primoN(m/10);
 		//System.out.println(o);
 		int n = s.genNumero(100);
-		s.fibo(n);
+		System.out.println(s.fibo(n));
 		int p = (s.fibo(11));
 		System.out.println(n);
 	}
