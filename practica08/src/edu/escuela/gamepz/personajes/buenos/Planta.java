@@ -23,26 +23,31 @@ public class Planta extends Personaje{
 	public String getDetalle(){
 		return super.getDetalle() + "\t" + escudo;
 	}
-	public char getEscudo(){
+	/*public char getEscudo(){
 		return escudo;
-	}
+	}*/
 	//Metodos dec
 	public void decVida(){
-		if (getEscudo() == 'A') {
+		if (escudo == 'A') {
 			decVida(1);
 		}
 	}
 	public void decVida(int vida){
 		super.decVida(vida);
-		if (getEscudo() == 'A') {
+		if (escudo == 'A') {
 			vida *= 2;
 		}
 	}
 	//Metodos add
 	public void addVida(){
-		vida +=1;
+		if (escudo == 'A') {
+			addVida(1);
+		};
 	}
 	public void addVida(int vida){
-		this.vida += vida;;
+		super.addVida(vida);
+		if (escudo == 'A') {
+			vida *= 2;
+		}
 	}
 }
