@@ -36,4 +36,18 @@ public class Zombie extends Personaje{
 		}
 	}
 	//Metodos addVida
+	public void addVida(){
+		super.addVida();
+	}
+	public void addVida(int vida){
+		super.addVida(vida);
+		if (!ataque) {
+			vida *= 3;
+		}else{
+			if (ataque) {
+				vida *= 0;
+			}
+		}
+	}
+
 }
