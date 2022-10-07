@@ -5,9 +5,18 @@ public class Personaje{
 	private String nombre;
 	private int vida;
 
-	public Personaje(String nombre){
+	public Personaje(String nombre, int vida){
 		this.nombre = nombre;
-		vida = 0;
+		this.vida = vida;
+	}
+	public Personaje(String nombre){
+		this(nombre,3);
+	}
+	public void decVida(){
+		vida -= 1;
+	}
+	public void decVida(int vida){
+		this.vida = vida - vida;
 	}
 
 	public void setNombre(String nombre){

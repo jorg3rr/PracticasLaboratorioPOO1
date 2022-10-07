@@ -30,8 +30,8 @@ public class PruebaPersonaje{
 
 		int n = ((int)(Math.random()*100));
 		
-		per07.setEdad(n);
-		per09.setEdad(n);
+		per07.setVida(n);
+		per09.setVida(n);
 		
 		System.out.println("_  _  _");
 
