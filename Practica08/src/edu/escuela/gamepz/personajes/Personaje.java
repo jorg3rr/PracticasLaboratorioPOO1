@@ -11,7 +11,7 @@ public class Personaje{
 	public Personaje(String nombre){
 		this(nombre,3);
 	}
-	
+	//Metodos Decremento de Vida
 	public void decVida(){
 		vida -= 1;
 	}
@@ -19,12 +19,13 @@ public class Personaje{
 	public void decVida(int vida){
 		this.vida -= vida;
 	}
+	//Metodos Add Vida
 
 	public void addVida(){
 		vida +=1;
 	}
 	public void addVida(int vida){
-		this.vida += vida;;
+		this.vida += vida;
 	}
 	public void setNombre(String nombre){
 		if (nombre.length() > 5 && nombre.length() < 25){
@@ -47,7 +48,7 @@ public class Personaje{
 	}
 
 	public boolean setVida(int vida){
-		if (vida > 0 && vida < 99){
+		if (vida >= 0 && vida <= 99){
 			this.vida = vida;
 			return true;
 		}else{
@@ -56,4 +57,3 @@ public class Personaje{
 		}
 	}	
 }
-/* */
