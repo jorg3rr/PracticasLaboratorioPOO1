@@ -1,3 +1,4 @@
+package mx.desasof.inmobiliaria.casas
 public class Casa{
 	String tipo;
 	int hab;
@@ -8,6 +9,15 @@ public class Casa{
 		this.costo = costo;
 	}
 	public Casa(String tipo){
-		this.tipo = tipo;
+		this
+	}
+	public int hashCode{
+		return tipo = hab*costo;
+	}
+	public boolean equals(){
+
+	}
+	public String toString(){
+		return tipo + " " + hab + " " + costo; 
 	}
 }
