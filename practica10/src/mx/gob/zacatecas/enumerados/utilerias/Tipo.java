@@ -1,3 +1,4 @@
+package mx.gob.zacatecas.enumerados.utilerias;
 public enum Tipo{
 	SERVER("Servidor"),
 	WORKSTATITON("Estacion de Trabajo"),
@@ -6,7 +7,10 @@ public enum Tipo{
 
 	private String type;
 	
-	private String getType(){
+	private Tipo(String type){
+		this.type = type;
+	}
+	public String getType(){
 		return type;
 	}
 }

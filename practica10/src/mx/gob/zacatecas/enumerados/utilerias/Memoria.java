@@ -9,14 +9,20 @@ public enum Memoria{
 	private String tipo;
 	private float velocidad;
 	private int pines;
+	
+	private Memoria(String tipo, float velocidad, int pines){
+		this.tipo = tipo;
+		this.velocidad = velocidad;
+		this.pines = pines;
+	}
 	//Metodos para regresar los valores
-	private String getTipo(){
+	public String getTipo(){
 		return tipo;
 	}
-	private float getVelocidad(){
+	public float getVelocidad(){
 		return velocidad;
 	}
-	private int getPines(){
+	public int getPines(){
 		return pines;
 	}
 }
