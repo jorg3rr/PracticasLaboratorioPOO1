@@ -11,6 +11,9 @@ public class PruebaComputadora{
 	
 		Computadora equip[] = {c1,c2,c3,c4};
 
+		for (Computadora tmp: equip) {
+		  	System.out.println(tmp);
+		  }
 	}
 	//fore
 }
