@@ -32,18 +32,19 @@ public class Planta extends Personaje{
     }
     ///Decrementos
     public void decVida(){
-        vida = vida - escudo.getNivel();
+        setVida(vida - escudo.getNivel());
     }
     public void decVida(int nivel){
-        vida = vida - escudo.getNivel()*nivel;
+        setVida(vida - escudo.getNivel()*nivel);
     }
     ///Incrementos
     public void addVida(){
-        vida = vida + escudo.getNivel();
+        setVida(vida + escudo.getNivel());
     }
 
     public void addVida(int nivel){
-        vida = vida + escudo.getNivel()*nivel;
+        setVida(vida + escudo.getNivel()*nivel);
+
 
     }
 
