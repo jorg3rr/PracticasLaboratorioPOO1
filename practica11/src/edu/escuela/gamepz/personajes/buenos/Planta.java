@@ -19,19 +19,23 @@ public class Planta extends Personaje{
     }
     public Planta(String nombre, int vida){
         super(nombre, vida);
-        escudo = 0;
+        escudo = Escudo.NULO;
     }
     public Planta(String nombre){
         super(nombre, 3);
-        escudo = 0;
+        escudo = Escudo.NULO;
     }
 
     ///Detalles de metodo getDetalle
-    public String getDetalle(){
-        return super.getDetalle() + " " + escudo;
+    public String toString(){
+        return super.toString() + " " + escudo.getNivel();
     }
     ///Decrementos
     public void decVida(){
+        vida = (vida - escudo.getNivel());
+        if (escudo = escudo.getNivel()) {
+        vida = (vida - escudo.getNivel())*escudo.getNivel();
+        }
         /*if (escudo == 'A'){
             super.decVida(2);
         } else {
