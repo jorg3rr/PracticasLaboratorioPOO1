@@ -35,7 +35,7 @@ public class Planta extends Personaje{
         vida = vida - escudo.getNivel();
     }
     public void decVida(int nivel){
-        vida = vida - escudo.getNivel()*escudo.getNivel();
+        vida = vida - escudo.getNivel()*nivel;
     }
     ///Incrementos
     public void addVida(){
@@ -43,7 +43,7 @@ public class Planta extends Personaje{
     }
 
     public void addVida(int nivel){
-        vida = vida + escudo.getNivel()*escudo.getNivel();
+        vida = vida + escudo.getNivel()*nivel;
 
     }
 
