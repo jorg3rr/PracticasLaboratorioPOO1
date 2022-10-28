@@ -1,8 +1,8 @@
-package edu.issoft.pvsz.personajes;
+package edu.escuela.gamepz.personajes;
 
-public class Personaje{
+public abstract class Personaje{
     private String nombre;
-    private int vida;
+    protected int vida;
 
     public Personaje(String nombre, int vida){
         this.nombre = nombre;
@@ -34,34 +34,34 @@ public class Personaje{
         return false;
         }
     }
-    public String getDetalle(){
+    public String toString(){
         return nombre+"\t"+vida;
     }
     ///Decrementador de Vida
-    public void decVida(){
+    public abstract void decVida();/*{
         if ((vida-1 > 0) && (vida-1 < 100)){
             vida = vida - 1;
         }
-    }
+    }*/
 
-    public void decVida(int dec){
+    public abstract void decVida(int dec);/*{
         if ((vida-dec > 0) && (vida-dec < 100)){
             vida = vida - dec;
         }
-    }
+    }*/
 
     ///Incrementador de Vida
-    public void addVida(){
+    public abstract void addVida();/*{
         if ((vida+1 > 0) && (vida+1 < 100)){
             vida = vida + 1;
         }
-    }
+    }*/
     
-    public void addVida(int incvida){
+    public abstract void addVida(int incvida);/*{
         if ((vida+incvida > 0) && (vida+incvida < 100)){
             vida = vida + incvida;
         }
-    }
+    }*/
     
     /*
     if (vida < 0){
