@@ -36,19 +36,19 @@ public class Zombi extends Personaje implements Muerto{
     ///Decrementos sin atributo
     public void decVida(){
         if (ataque == false){
-            decVida(3);
+            setVida(3);
         }
         else if (ataque == true){
-            decVida(2);
+            setVida(2);
         }
     }
     ///Decrementos con Atributos
     public void decVida(int dec){
         if (ataque == false){
-            decVida(dec*3);
+            setVida(vida - dec*3);
         }
         else if (ataque == true){
-            decVida(dec*2);
+            setVida(vida - dec*2);
         }
     }
  
@@ -57,10 +57,10 @@ public class Zombi extends Personaje implements Muerto{
     ///Incremento sin Atribs
     public void addVida(){
         if (ataque == false){
-            addVida(0);
+            setVida(0);
         }
         else if (ataque == true){
-            addVida(0);
+            setVida(0);
         }
 
     }
@@ -68,10 +68,10 @@ public class Zombi extends Personaje implements Muerto{
     //Incremento con atrib
     public void addVida(int vida){
         if (ataque == true){
-            addVida(vida *3);
+            setVida(vida *3);
         }
         else if (ataque == false){
-            addVida(0);
+            setVida(0);
         }
     }
 }
