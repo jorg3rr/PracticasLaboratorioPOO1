@@ -1,15 +1,17 @@
-package edu.issoft.pvsz.personajes.malos;
-import edu.issoft.pvsz.personajes.Personaje;
+package edu.escuela.gamepz.personajes.malos;
+import edu.escuela.gamepz.personajes.Personaje;
+import edu.escuela.gamepz.utils.Escudo;
+import edu.escuela.gamepz.utils.Muerto;
 
-public class Zombi extends Personaje{
+public class Zombi extends Personaje implements Muerto{
     public boolean ataque;
 
     public boolean getAtaque(){
         return ataque;
-    };
-    ///Constructores sonbi (si, con s)
+    }
+
     public Zombi(String nombre, int vida, boolean ataque){
-        super(nombre, vida);
+        super(nombre, vida, Escudo.NULO);
         this.ataque = ataque;
     }
     public Zombi(String nombre, boolean ataque){
@@ -20,53 +22,30 @@ public class Zombi extends Personaje{
         super(nombre, 3);
         ataque = false;
     }
+    public void comer(){
+        
+    }
 
-    ///Metodo obtener detalles
-    public String getDetalle(){
-        return super.getDetalle()+" "+ataque;
+    //Metodo toString
+    public String toString(){
+        return super.toString() + " " + ataque;
     }
 
     ///Decrementos
-    ///Decrementos sin atributo
-    public void decVida(){
-        if (ataque == false){
-            super.decVida(3);
-        }
-        else if (ataque == true){
-            super.decVida(2);
-        }
+        public void decVida(){
+        vida = vida - escudo.getNivel();
     }
-    ///Decrementos con Atributos
-    public void decVida(int dec){
-        if (ataque == false){
-            super.decVida(dec*3);
-        }
-        else if (ataque == true){
-            super.decVida(dec*2);
-        }
+    public void decVida(int nivel){
+        vida = vida - escudo.getNivel()*escudo.getNivel();
     }
- 
-    
-    ///INCREMENTOS
-    ///Incremento sin Atribs
+    ///Incrementos
     public void addVida(){
-        if (ataque == false){
-            super.addVida(0);
-        }
-        else if (ataque == true){
-            super.addVida(0);
-        }
-
+        vida = vida + escudo.getNivel();
     }
 
-    //Incremento con atrib
-    public void addVida(int vida){
-        if (ataque == true){
-            super.addVida(vida *3);
-        }
-        else if (ataque == false){
-            super.addVida(0);
-        }
+    public void addVida(int nivel){
+        vida = vida + escudo.getNivel()*escudo.getNivel();
+
     }
 
 }
