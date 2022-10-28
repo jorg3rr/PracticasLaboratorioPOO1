@@ -1,23 +1,22 @@
-package edu.issoft.pvsz.pruebas;
-import edu.issoft.pvsz.personajes.Personaje;
-import edu.issoft.pvsz.personajes.buenos.Planta;
-import edu.issoft.pvsz.personajes.malos.Zombi;
-import java.util.*;
+package edu.escuela.gamepz.pruebas;
+import edu.escuela.gamepz.personajes.Personaje;
+import edu.escuela.gamepz.personajes.buenos.Planta;
+import edu.escuela.gamepz.personajes.malos.Zombi;
 
-public class PruebaPersonaje{
+public class PruebaHerencia{
     public static void main(String[] args){
         int contador = 0;
         Random rnd = new Random();
         //personajes
-        Personaje per01 = new Personaje("Adrian", 100);
-        Personaje per02 = new Personaje("Diego");
-        Planta plan01 = new Planta("Angel", 10, 'B');
-        Planta plan02 = new Planta("Maria", 50);
-        Planta plan03 = new Planta("Mario", 'C');
+        Personaje per01 = new Personaje("David", 100);
+        Personaje per02 = new Personaje("Bianca");
+        Planta plan01 = new Planta("Fabian", 10,Escudo.MEDIO);
+        Planta plan02 = new Planta("Almendra", 50);
+        Planta plan03 = new Planta("Ricardo",Escudo.BAJO);
         Planta plan04 = new Planta("Silvia");
         Zombi zom01 = new Zombi("Armando", 80, false);
-        Zombi zom02 = new Zombi("Areli", true);
-        Zombi zom03 = new Zombi("Gerardo");
+        Zombi zom02 = new Zombi("Josseline", true);
+        Zombi zom03 = new Zombi("Eduardo");
         //Array
         Personaje personajes [] = new Personaje [9];
         personajes [0] = per01;

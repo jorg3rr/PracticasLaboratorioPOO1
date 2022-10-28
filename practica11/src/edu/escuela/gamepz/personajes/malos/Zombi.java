@@ -11,7 +11,7 @@ public class Zombi extends Personaje implements Muerto{
     }
 
     public Zombi(String nombre, int vida, boolean ataque){
-        super(nombre, vida, Escudo.NULO);
+        super(nombre, vida);
         this.ataque = ataque;
     }
     public Zombi(String nombre, boolean ataque){
@@ -22,30 +22,56 @@ public class Zombi extends Personaje implements Muerto{
         super(nombre, 3);
         ataque = false;
     }
-    public void comer(){
-        
-    }
 
-    //Metodo toString
+    ///Metodo obtener detalles
     public String toString(){
         return super.toString() + " " + ataque;
     }
+    //Metodo comer
+    public void comer(){
+        System.out.println("Come cerebros");
+    }
 
     ///Decrementos
-        public void decVida(){
-        vida = vida - escudo.getNivel();
+    ///Decrementos sin atributo
+    public void decVida(){
+        if (ataque == false){
+            decVida(3);
+        }
+        else if (ataque == true){
+            decVida(2);
+        }
     }
-    public void decVida(int nivel){
-        vida = vida - escudo.getNivel()*escudo.getNivel();
+    ///Decrementos con Atributos
+    public void decVida(int dec){
+        if (ataque == false){
+            decVida(dec*3);
+        }
+        else if (ataque == true){
+            decVida(dec*2);
+        }
     }
-    ///Incrementos
+ 
+    
+    ///INCREMENTOS
+    ///Incremento sin Atribs
     public void addVida(){
-        vida = vida + escudo.getNivel();
+        if (ataque == false){
+            addVida(0);
+        }
+        else if (ataque == true){
+            addVida(0);
+        }
+
     }
 
-    public void addVida(int nivel){
-        vida = vida + escudo.getNivel()*escudo.getNivel();
-
+    //Incremento con atrib
+    public void addVida(int vida){
+        if (ataque == true){
+            addVida(vida *3);
+        }
+        else if (ataque == false){
+            addVida(0);
+        }
     }
-
 }
