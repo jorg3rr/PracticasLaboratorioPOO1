@@ -12,9 +12,17 @@ public class Tablero{
 			if (tmp == null) {
 				System.out.println(tmp + "---");
 			}else{
-				System.out.println();
+				System.out.println(tmp + " " + personajes);
 			}
 			System.out.println("Fin * * * Contenido del arreglo en Tablero\n");
+		}
+	}
+	public void insertar(Personaje p, int pos)throws PersException{
+		if (pos < 0 || pos > MAX_SIZE) {
+			throw new PersException("Indice fuera de rango",pos);  
+		}else{
+			personajes[pos] = p;
+
 		}
 	}
 }
