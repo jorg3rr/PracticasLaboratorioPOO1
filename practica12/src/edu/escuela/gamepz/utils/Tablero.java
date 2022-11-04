@@ -23,12 +23,18 @@ public class Tablero{
 	public void insertar(Personaje p, int pos)throws PersException{
 		if (pos < 0 || pos > MAX_SIZE) {
 			throw new PersException("Indice fuera de rango",pos);  
-		}else{
-			personajes[pos] = p;
 		}
+		personajes[pos] = p;
 	}
 
 	public void borrar(int pos)throws PersException{
-
+		if (pos < 0 || pos > MAX_SIZE) {
+			throw new PersException("Indice fuera de rango",pos);  	
+		}
+		if (personajes[pos] == null) {
+			throw new PersException("Si personaje para borrar",pos);	
+		}
+		personajes[pos] = null;
 	}
+
 }
