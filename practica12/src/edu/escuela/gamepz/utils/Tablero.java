@@ -8,16 +8,17 @@ public class Tablero{
 	}
 	public static void mostrar(){
 		System.out.println("\nInicio * * * Contenido del arreglo en Tablero");
+		int cont = 0;
 		for (Personaje tmp: personajes) {
-			int cont = 0;
 			if (tmp == null) {
-				System.out.println(personajes[cont] + "---");
+				System.out.println(cont + "---");
 			}else{
-				System.out.println(personajes[cont] + " " + personajes);
+				System.out.println(cont + " " + personajes);
 			}
-			cont += 1;
-			System.out.println("Fin * * * Contenido del arreglo en Tablero\n");
+			cont +=1;
 		}
+		System.out.println("Fin * * * Contenido del arreglo en Tablero\n");
+
 	}
 	
 	public static void insertar(Personaje p, int pos)throws PersException{
