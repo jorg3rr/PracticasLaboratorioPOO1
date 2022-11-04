@@ -13,7 +13,7 @@ public class Tablero{
 			if (tmp == null) {
 				System.out.println(cont + "---");
 			}else{
-				System.out.println(cont + " " + personajes);
+				System.out.println(cont + " " + tmp);
 			}
 			cont +=1;
 		}
