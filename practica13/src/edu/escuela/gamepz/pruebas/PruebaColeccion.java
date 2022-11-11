@@ -6,6 +6,7 @@ import edu.escuela.gamepz.utils.*;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.TreeSet;
+import java.util.ArrayList;
 public class PruebaColeccion{
 	public static void main(String[] args) {
 		Personaje[] datos = {
@@ -18,16 +19,28 @@ public class PruebaColeccion{
 			new Zombi("Armando",Tablero.genVida(),false),
 			new Zombi("Dayan",Tablero.genVida(),true),
 			new Zombi("Armando",Tablero.genVida())};
-			TreeSet<Personaje> ts = new TreeSet<>();
+			TreeSet<Personaje> arbol = new TreeSet<>();
 			for (Personaje tmp: datos) {
-				ts.add(tmp);
-			}
-			LinkedList<Personaje> linked = LinkedList<>();
-			linked.addAll(ts);
-			Collections.sort(linked, new byVida());
-			for (Personaje personajes: linked) {
-				System.out.println(personajes);
+				arbol.add(tmp);
 			}
 
+			LinkedList<Personaje> lista = new LinkedList<>();
+			lista.addAll(arbol);
+			System.out.println(" - - - Orden Natural - - - ");
+			for (Personaje p:arbol){
+			System.out.println(p);
+			}
+			System.out.println(" - - - Orden Vida - - - ");
+			Collections.sort(lista,new ByVida());
+			for (Personaje p:lista){
+			System.out.println(p);
+			}
+			ArrayList<Personaje> arr = new ArrayList<>();
+			arr.addAll(lista);
+			System.out.println(" - - - Orden Tamanio - - - ");
+			Collections.sort(arr, new BySize());
+			for (Personaje p:arr){
+			System.out.println(p);
+		}
 	}
 }
