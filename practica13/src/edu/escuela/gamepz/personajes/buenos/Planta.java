@@ -1,6 +1,7 @@
 package edu.escuela.gamepz.personajes.buenos;
 import edu.escuela.gamepz.personajes.Personaje;
 import edu.escuela.gamepz.utils.Escudo;
+import edu.escuela.gamepz.utils.Tablero;
 public class Planta extends Personaje{
     public Escudo escudo;
     
@@ -9,7 +10,7 @@ public class Planta extends Personaje{
     }
 
     ///Constructores importando los atributos de la clase super
-    public Planta(String nombre, int vida, float size, Escudo escudo){
+    public Planta(String nombre, int vida,Escudo escudo){
         super(nombre, vida, 0.0f);
         this.escudo = escudo;
     }
@@ -44,8 +45,6 @@ public class Planta extends Personaje{
 
     public void addVida(int nivel){
         setVida(vida + escudo.getNivel()*nivel);
-
-
     }
 
 }

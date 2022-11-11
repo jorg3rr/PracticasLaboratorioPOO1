@@ -2,10 +2,11 @@ package edu.escuela.gamepz.personajes.malos;
 import edu.escuela.gamepz.personajes.Personaje;
 import edu.escuela.gamepz.utils.Escudo;
 import edu.escuela.gamepz.utils.Muerto;
+import edu.escuela.gamepz.utils.Tablero;
 public class Zombi extends Personaje implements Muerto{
     public boolean ataque;
 
-    public Zombi(String nombre, int vida, float size, boolean ataque){
+    public Zombi(String nombre, int vida,boolean ataque){
         super(nombre, vida, 0.0f);
         this.ataque = ataque;
     }
