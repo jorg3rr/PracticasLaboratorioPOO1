@@ -19,6 +19,15 @@ public class PruebaColeccion{
 			new Zombi("Dayan",Tablero.genVida(),true),
 			new Zombi("Armando",Tablero.genVida())};
 			TreeSet<Personaje> ts = new TreeSet<>();
-			ts.add(Personaje[] datos);	
+			for (Personaje tmp: datos) {
+				ts.add(tmp);
+			}
+			LinkedList<Personaje> linked = LinkedList<>();
+			linked.addAll(ts);
+			Collections.sort(linked, new byVida());
+			for (Personaje personajes: linked) {
+				System.out.println(personajes);
+			}
+
 	}
 }
