@@ -35,7 +35,7 @@ public abstract class Personaje implements Comparable<Personaje>{
             return this.nombre.compareTo(o.nombre);
         }
         if (this.vida == o.vida) {
-            return o.vida - this.vida;      
+            return this.vida - o.vida;      
         }
         if (this.size == o.size) {
             return 0;
@@ -63,7 +63,7 @@ public abstract class Personaje implements Comparable<Personaje>{
         }
     }
     public String toString(){
-        return nombre+"\t"+vida;
+        return nombre+"\t"+vida + "\t" + getSize();
     }
     ///Decrementador de Vida
     public abstract void decVida();
