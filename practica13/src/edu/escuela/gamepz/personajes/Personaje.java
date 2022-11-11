@@ -18,6 +18,9 @@ public abstract class Personaje implements Comparable<Personaje>{
         this.nombre = nombre;
         vida = 3;
         size = 0.0f;
+    }
+    public float getSize(){
+        return size;
     }    
     //Metodo genSize  
     public float genSize(){
@@ -39,7 +42,6 @@ public abstract class Personaje implements Comparable<Personaje>{
         }
         return (o.size > this.size ? -1 : 1);
     }
-
     public void setNombre(String nombre){
         if ((nombre.length() > 3) && (nombre.length() < 20)){
             this.nombre = nombre;
