@@ -2,27 +2,28 @@ package edu.escuela.gamepz.personajes.malos;
 import edu.escuela.gamepz.personajes.Personaje;
 import edu.escuela.gamepz.utils.Escudo;
 import edu.escuela.gamepz.utils.Muerto;
-
 public class Zombi extends Personaje implements Muerto{
     public boolean ataque;
 
-    public boolean getAtaque(){
-        return ataque;
-    }
-
-    public Zombi(String nombre, int vida, boolean ataque){
-        super(nombre, vida);
+    public Zombi(String nombre, int vida, float size, boolean ataque){
+        super(nombre, vida, 0.0f);
         this.ataque = ataque;
     }
+    public Zombi(String nombre, float size){
+        super(nombre, 3, size);
+    }
+
     public Zombi(String nombre, boolean ataque){
-        super(nombre, 3);
+        super(nombre, 3, 0.0f);
         this.ataque = ataque;
     }
     public Zombi(String nombre){
-        super(nombre, 3);
+        super(nombre, 3, 0.0f);
         ataque = false;
     }
-
+    public boolean getAtaque(){
+        return ataque;
+    }
     ///Metodo obtener detalles
     public String toString(){
         return super.toString() + " " + ataque;

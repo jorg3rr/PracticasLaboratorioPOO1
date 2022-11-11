@@ -9,20 +9,20 @@ public class Planta extends Personaje{
     }
 
     ///Constructores importando los atributos de la clase super
-    public Planta(String nombre, int vida, Escudo escudo){
-        super(nombre, vida);
+    public Planta(String nombre, int vida, Escudo escudo, float size){
+        super(nombre, vida, 0.0f);
         this.escudo = escudo;
     }
     public Planta(String nombre, Escudo escudo){
-        super(nombre, 3);
+        super(nombre, 3, 0.0f);
         this.escudo = escudo;
     }
     public Planta(String nombre, int vida){
-        super(nombre, vida);
+        super(nombre, vida, 0.0f);
         escudo = Escudo.NULO;
     }
     public Planta(String nombre){
-        super(nombre, 3);
+        super(nombre, 3, 0.0f);
         escudo = Escudo.NULO;
     }
 
