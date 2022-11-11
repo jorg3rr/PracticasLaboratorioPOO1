@@ -35,7 +35,7 @@ public abstract class Personaje implements Comparable<Personaje>{
             return this.nombre.compareTo(o.nombre);
         }
         if (this.vida == o.vida) {
-            return this.vida - o.vida;      
+            return o.vida - this.vida;      
         }
         if (this.size == o.size) {
             return 0;

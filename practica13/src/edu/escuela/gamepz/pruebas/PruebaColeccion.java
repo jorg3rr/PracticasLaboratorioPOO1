@@ -19,6 +19,7 @@ public class PruebaColeccion{
 			new Zombi("Armando",Tablero.genVida(),false),
 			new Zombi("Dayan",Tablero.genVida(),true),
 			new Zombi("Armando",Tablero.genVida())};
+			
 			TreeSet<Personaje> arbol = new TreeSet<>();
 			for (Personaje tmp: datos) {
 				arbol.add(tmp);
