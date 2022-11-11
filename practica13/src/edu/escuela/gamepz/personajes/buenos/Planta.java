@@ -9,7 +9,7 @@ public class Planta extends Personaje{
     }
 
     ///Constructores importando los atributos de la clase super
-    public Planta(String nombre, int vida, Escudo escudo, float size){
+    public Planta(String nombre, int vida, float size, Escudo escudo){
         super(nombre, vida, 0.0f);
         this.escudo = escudo;
     }

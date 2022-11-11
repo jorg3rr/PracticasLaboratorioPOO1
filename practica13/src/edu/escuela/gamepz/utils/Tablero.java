@@ -3,12 +3,11 @@ import edu.escuela.gamepz.personajes.Personaje;
 public class Tablero{
 	public static int MAX_SIZE = 10;
 	public static Personaje[] personajes = new Personaje[MAX_SIZE]; 
-	private Tablero(int MAX_SIZE){
-		this.MAX_SIZE = MAX_SIZE;
-	}
+	private Tablero(){}
 	//Metodo genVida
 	public int genVida(int x){
-		return x = (int)(Math.random()*10+1);
+		x = (int)(Math.random()*10+1);
+		return x;
 	}
 	public static void mostrar(){
 		System.out.println("\nInicio * * * Contenido del arreglo en Tablero");
