@@ -8,7 +8,7 @@ public class Tablero{
 	}
 	//Metodo genVida
 	public int genVida(int x){
-		return x = (int)(Math.random()*10);
+		return x = (int)(Math.random()*10+1);
 	}
 	public static void mostrar(){
 		System.out.println("\nInicio * * * Contenido del arreglo en Tablero");
