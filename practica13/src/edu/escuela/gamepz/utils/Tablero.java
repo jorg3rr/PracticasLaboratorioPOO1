@@ -6,6 +6,10 @@ public class Tablero{
 	private Tablero(int MAX_SIZE){
 		this.MAX_SIZE = MAX_SIZE;
 	}
+	//Metodo genVida
+	public int genVida(int x){
+		return x = (int)(Math.random()*10);
+	}
 	public static void mostrar(){
 		System.out.println("\nInicio * * * Contenido del arreglo en Tablero");
 		int cont = 0;
