@@ -22,7 +22,7 @@ public class PruebaColeccion{
 		fname = s.nextLine();
 		path += fname;
 		File f = new File(path);
-		if (f.exists()) {
+		if (f.isFile() && f.exists()) {
 			System.out.println("El archivo existe");
 			System.exit(0);
 		}
@@ -71,6 +71,6 @@ public class PruebaColeccion{
 		}
 	}
 	public static void mostrarDirectorio(File f){
-
+		System.out.println(f);
 	}
 }
