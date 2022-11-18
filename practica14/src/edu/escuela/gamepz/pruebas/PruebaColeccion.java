@@ -31,6 +31,8 @@ public class PruebaColeccion{
 			System.out.println("Es directorio");
 			System.exit(0);
 		}
+
+		guardarObjetos();
 		Personaje[] datos = {
 			new Planta("Fabian",Tablero.genVida(), Escudo.MEDIO),
 			new Planta("Bianca",Tablero.genVida()),
@@ -72,7 +74,9 @@ public class PruebaColeccion{
 	}
 	public static void mostrarDirectorio(File f){
 		String[] direc = f.list();
-		System.out.println(f);
+		for (String arc: direc) {
+			System.out.println(arc);
+		}
 	}
 	public static void guardarObjetos(File f, TreeSet<Personaje> arbol){
 
