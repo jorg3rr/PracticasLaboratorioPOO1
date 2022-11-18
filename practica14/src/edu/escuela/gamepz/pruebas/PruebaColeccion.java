@@ -27,7 +27,7 @@ public class PruebaColeccion{
 			System.exit(0);
 		}
 		if (f.isDirectory()) {
-			f.mostrarDirectorio();
+			mostrarDirectorio(f);
 			System.out.println("Es directorio");
 			System.exit(0);
 		}
@@ -71,6 +71,10 @@ public class PruebaColeccion{
 		}
 	}
 	public static void mostrarDirectorio(File f){
+		String[] direc = f.list();
 		System.out.println(f);
+	}
+	public static void guardarObjetos(File f, TreeSet<Personaje> arbol){
+
 	}
 }
