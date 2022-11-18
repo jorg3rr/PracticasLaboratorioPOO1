@@ -11,13 +11,26 @@ import java.util.ArrayList;
 import edu.escuela.gamepz.utils.BySize;
 import edu.escuela.gamepz.utils.ByVida;
 import java.util.Scanner;
+import java.io.File;
 
 public class PruebaColeccion{
 	public static void main(String[] args) {
 		String path = System.getProperty("user.home") + System.getProperty("file.separator");
 		Scanner s = new Scanner(System.in);
+		System.out.println("Escribe el nombre del archivo o directorio");
 		String fname = "";
+		fname = s.nextLine();
 		path += fname;
+		File f = new File(path);
+		if (f.exists()) {
+			System.out.println("El archivo existe");
+			System.exit(0);
+		}
+		if (f.isDirectory()) {
+			f.mostrarDirectorio();
+			System.out.println("Es directorio");
+			System.exit(0);
+		}
 		Personaje[] datos = {
 			new Planta("Fabian",Tablero.genVida(), Escudo.MEDIO),
 			new Planta("Bianca",Tablero.genVida()),
@@ -56,5 +69,8 @@ public class PruebaColeccion{
 		for (Personaje p : arr) {
 			System.out.println(p);
 		}
+	}
+	public static void mostrarDirectorio(File f){
+
 	}
 }
