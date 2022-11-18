@@ -12,6 +12,7 @@ import edu.escuela.gamepz.utils.BySize;
 import edu.escuela.gamepz.utils.ByVida;
 import java.util.Scanner;
 import java.io.File;
+import java.io.*;
 
 public class PruebaColeccion{
 	public static void main(String[] args) {
@@ -48,7 +49,9 @@ public class PruebaColeccion{
 		for (Personaje tmp : datos ) {
 			arbol.add(tmp);
 		}
-		//guardarObjetos(f,arbol);
+		
+		guardarObjetos(f,arbol);
+		
 		LinkedList<Personaje> lista = new LinkedList<Personaje>();
 		for (Personaje tmp : datos ) {
 			lista.add(tmp);
@@ -81,7 +84,9 @@ public class PruebaColeccion{
 		try {
 			FileOutputStream fo = new FileOutputStream (f);
 			ObjectOutputStream s = new ObjectOutputStream (fo);
-			s.writeObject ();
+			for (Personaje p: arbol) {
+			s.writeObject (p);					
+			}
 			s.close ();
 		} catch (IOException e) {
 			e.printStackTrace ();
