@@ -17,7 +17,7 @@ public class PruebaColeccion{
 	public static void main(String[] args) {
 		String path = System.getProperty("user.home") + System.getProperty("file.separator");
 		Scanner s = new Scanner(System.in);
-		System.out.println("Escribe el nombre del archivo o directorio");
+		System.out.println("Escribe el nombre del archivo o directorio: ");
 		String fname = "";
 		fname = s.nextLine();
 		path += fname;
@@ -32,7 +32,6 @@ public class PruebaColeccion{
 			System.exit(0);
 		}
 
-		guardarObjetos();
 		Personaje[] datos = {
 			new Planta("Fabian",Tablero.genVida(), Escudo.MEDIO),
 			new Planta("Bianca",Tablero.genVida()),
@@ -49,7 +48,7 @@ public class PruebaColeccion{
 		for (Personaje tmp : datos ) {
 			arbol.add(tmp);
 		}
-
+		//guardarObjetos(f,arbol);
 		LinkedList<Personaje> lista = new LinkedList<Personaje>();
 		for (Personaje tmp : datos ) {
 			lista.add(tmp);
@@ -79,6 +78,13 @@ public class PruebaColeccion{
 		}
 	}
 	public static void guardarObjetos(File f, TreeSet<Personaje> arbol){
-
+		try {
+			FileOutputStream fo = new FileOutputStream (f);
+			ObjectOutputStream s = new ObjectOutputStream (fo);
+			s.writeObject ();
+			s.close ();
+		} catch (IOException e) {
+			e.printStackTrace ();
+		}
 	}
 }
