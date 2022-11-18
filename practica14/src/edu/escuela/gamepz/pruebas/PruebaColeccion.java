@@ -10,9 +10,14 @@ import java.util.Collections;
 import java.util.ArrayList;
 import edu.escuela.gamepz.utils.BySize;
 import edu.escuela.gamepz.utils.ByVida;
+import java.util.Scanner;
 
 public class PruebaColeccion{
 	public static void main(String[] args) {
+		String path = System.getProperty("user.home") + System.getProperty("file.separator");
+		Scanner s = new Scanner(System.in);
+		String fname = "";
+		path += fname;
 		Personaje[] datos = {
 			new Planta("Fabian",Tablero.genVida(), Escudo.MEDIO),
 			new Planta("Bianca",Tablero.genVida()),
