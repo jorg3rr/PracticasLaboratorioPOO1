@@ -1,17 +1,13 @@
 package edu.escuela.gamepz.pruebas;
 import edu.escuela.gamepz.personajes.buenos.Planta;
 import edu.escuela.gamepz.personajes.malos.Zombie;
-import edu.escuela.gamepz.utils.Tablero;
-import edu.escuela.gamepz.utils.Escudo;
+import edu.escuela.gamepz.utils.*;
 import edu.escuela.gamepz.personajes.Personaje;
 import java.util.TreeSet;
 import java.util.LinkedList;
 import java.util.Collections;
 import java.util.ArrayList;
-import edu.escuela.gamepz.utils.BySize;
-import edu.escuela.gamepz.utils.ByVida;
 import java.util.Scanner;
-import java.io.File;
 import java.io.*;
 
 public class PruebaColeccion{
@@ -32,7 +28,6 @@ public class PruebaColeccion{
 			System.out.println("Es directorio");
 			System.exit(0);
 		}
-
 		Personaje[] datos = {
 			new Planta("Fabian",Tablero.genVida(), Escudo.MEDIO),
 			new Planta("Bianca",Tablero.genVida()),
@@ -85,7 +80,7 @@ public class PruebaColeccion{
 			FileOutputStream fo = new FileOutputStream (f);
 			ObjectOutputStream s = new ObjectOutputStream (fo);
 			for (Personaje p: arbol) {
-			s.writeObject (p);					
+				s.writeObject (p);					
 			}
 			s.close ();
 		} catch (IOException e) {
