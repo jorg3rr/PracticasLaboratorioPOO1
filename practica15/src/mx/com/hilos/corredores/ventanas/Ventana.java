@@ -15,10 +15,10 @@ public class Ventana extends JFrame{
 	private JButton btnStart;
 
 	public Ventana(){
-		initComponentes();
+		initComponents();
 	}
 	
-	public void initComponentes(){
+	public void initComponents(){
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		int ancho = 550;
 		int alto = 250;
@@ -44,7 +44,6 @@ public class Ventana extends JFrame{
 			public void actionPerformed(ActionEvent e){
 				btnStart.setEnabled(false);
 				//RunHilos.iniciar();
-				
 			}
 		});
 
