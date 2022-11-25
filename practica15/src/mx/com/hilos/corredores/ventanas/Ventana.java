@@ -9,6 +9,7 @@ import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.FlowLayout;
+import mx.com.hilos.corredores.hilos.RunHilos;
 public class Ventana extends JFrame{
 	private JLabel lblTitulo, lblElem1, lblElem2, hElem1, hElem2;
 	private JTextField txtElem1, txtElem2;
@@ -43,7 +44,7 @@ public class Ventana extends JFrame{
 		btnStart.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				btnStart.setEnabled(false);
-				//RunHilos.iniciar();
+				RunHilos.iniciar(txtElem1,txtElem2,hElem1,hElem2);
 			}
 		});
 
