@@ -1,3 +1,4 @@
+package mx.com.hilos.corredores.ventanas;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
@@ -7,6 +8,7 @@ import java.awt.Dimension;
 import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.FlowLayout;
 public class Ventana extends JFrame{
 	private JLabel lblTitulo, lblElem1, lblElem2, hElem1, hElem2;
 	private JTextField txtElem1, txtElem2;
@@ -17,6 +19,7 @@ public class Ventana extends JFrame{
 	}
 	
 	public void initComponentes(){
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		int ancho = 550;
 		int alto = 250;
 		Dimension lblDim = new Dimension(ancho-15,alto/10);
@@ -40,8 +43,21 @@ public class Ventana extends JFrame{
 		btnStart.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e){
 				btnStart.setEnabled(false);
+				//RunHilos.iniciar();
+				
 			}
-			//RunHilos.iniciar();
 		});
+
+		this.setTitle("Practica 15");
+		this.setLayout(new FlowLayout());
+		this.setSize(ancho,alto);
+		this.add(lblTitulo);
+		this.add(lblElem1);
+		this.add(txtElem1);
+		this.add(lblElem2);
+		this.add(txtElem2);
+		this.add(btnStart);
+		this.add(hElem1);
+		this.add(hElem2);
 	}
 }
