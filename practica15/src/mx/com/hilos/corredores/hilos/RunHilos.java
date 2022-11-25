@@ -7,11 +7,13 @@ public class RunHilos{
 		char ch1, ch2;
 		ch1 = txt1.getText().charAt(0);
 		ch1 = txt1.getText().charAt(0);
-		if (ch1 ='\0' || ch1 = ' ') {
-			ch1 = 'E'
+		if (ch1 =='\0' || ch1 == ' ') {
+			ch1 = 'E';
 		}
-		if (ch2 ='\0' || ch2 = ' ') {
-			ch1 = 'M'
+		if (ch2 =='\0' || ch2 == ' ') {
+			ch1 = 'M';
 		}
+		String salida2 = String.valueOf(ch1);
+		String salida2 = String.valueOf(ch2);
 	}
 }
