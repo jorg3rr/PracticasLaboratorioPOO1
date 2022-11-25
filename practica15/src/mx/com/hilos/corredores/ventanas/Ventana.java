@@ -35,5 +35,13 @@ public class Ventana extends JFrame{
 		hElem2.setBorder(BorderFactory.createLineBorder(border));
 		hElem2.setPreferredSize(lblDim);
 		btnStart.setPreferredSize(lblDim);
+		//Clase Anonima
+		//btn.setEnable(false)
+		btnStart.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				btnStart.setEnabled(false);
+			}
+			//RunHilos.iniciar();
+		});
 	}
 }
