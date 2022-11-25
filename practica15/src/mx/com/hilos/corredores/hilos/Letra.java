@@ -8,6 +8,18 @@ public class Letra implements Runnable{
 		this.letra = letra;
 	}
 	public void run(){
+		String cadena = " ";
+		for (int i = 0; i <= 50; i++) {
+			cadena.charAt(letra);
+			etq.setText(cadena);
+			int rand = (int)(Math.random()*1000);
+			try{
+				Thread.sleep((int)(Math.random()*1000));
+			}catch(InterruptedException e){
 
+			}
+		}
+		//cadena = "Finalizado";
+		etq.setText(cadena = "Finalizado");
 	}
 }
